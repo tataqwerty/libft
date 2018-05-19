@@ -6,7 +6,7 @@
 /*   By: tkiselev <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 16:40:11 by tkiselev          #+#    #+#             */
-/*   Updated: 2018/05/03 21:23:31 by tkiselev         ###   ########.fr       */
+/*   Updated: 2018/05/15 20:48:27 by tkiselev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ void				ft_btree_apply_infix_reverse(t_btree *root,
 					void (*f)(void *));
 void				ft_btree_apply_postfix(t_btree *root, void (*f)(void *));
 
-# define BUFF_SIZE 10000
+# define BUFF_SIZE 1000000000
 
 typedef struct		s_gnl
 {

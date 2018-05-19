@@ -6,7 +6,7 @@
 /*   By: tkiselev <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 12:10:53 by tkiselev          #+#    #+#             */
-/*   Updated: 2018/04/30 14:40:17 by tkiselev         ###   ########.fr       */
+/*   Updated: 2018/05/19 10:21:42 by tkiselev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char		*ft_remalloc(char *ptr, int size)
 {
-	int				i;
+	int		i;
 	char	*new_ptr;
-	
+
 	i = 0;
 	if (!(new_ptr = (char *)malloc(sizeof(char)
 	* (size + 1))))
@@ -25,7 +25,7 @@ char		*ft_remalloc(char *ptr, int size)
 	if (ptr)
 	{
 		while (ptr[i] != '\0')
-        {
+		{
 			new_ptr[i] = ptr[i];
 			i++;
 		}
