@@ -6,13 +6,13 @@
 /*   By: tkiselev <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/25 17:25:15 by tkiselev          #+#    #+#             */
-/*   Updated: 2018/05/19 10:22:21 by tkiselev         ###   ########.fr       */
+/*   Updated: 2018/04/27 13:26:33 by tkiselev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*arr;
 	int		i;

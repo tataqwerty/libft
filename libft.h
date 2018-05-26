@@ -6,7 +6,7 @@
 /*   By: tkiselev <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 16:40:11 by tkiselev          #+#    #+#             */
-/*   Updated: 2018/05/15 20:48:27 by tkiselev         ###   ########.fr       */
+/*   Updated: 2018/05/26 20:15:42 by tkiselev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *big, const char *little);
 char				*ft_strnstr(const char *big, const char *little, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
+int					ft_strccmp(const char *s1, const char *s2, char c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
@@ -105,14 +106,7 @@ void				ft_btree_apply_infix_reverse(t_btree *root,
 					void (*f)(void *));
 void				ft_btree_apply_postfix(t_btree *root, void (*f)(void *));
 
-# define BUFF_SIZE 1000000000
-
-typedef struct		s_gnl
-{
-	char			*buffer;
-	int				tmp_fd;
-	struct s_gnl	*next;
-}					t_gnl;
+# define BUFF_SIZE 10000
 
 int					get_next_line(const int fd, char **line);
 #endif

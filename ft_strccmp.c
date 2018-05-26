@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_remalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strccmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkiselev <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/23 12:10:53 by tkiselev          #+#    #+#             */
-/*   Updated: 2018/04/30 14:40:17 by tkiselev         ###   ########.fr       */
+/*   Created: 2018/05/26 20:09:15 by tkiselev          #+#    #+#             */
+/*   Updated: 2018/05/26 20:15:27 by tkiselev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char		*ft_remalloc(char *ptr, int size)
+int		ft_strccmp(const char *s1, const char *s2, char c)
 {
-	int		i;
-	char	*new_ptr;
+	int i;
 
 	i = 0;
-	if (!(new_ptr = (char *)malloc(sizeof(char)
-	* (size + 1))))
-		return (NULL);
-	ft_bzero(new_ptr, size + 1);
-	if (ptr)
-	{
-		while (ptr[i] != '\0')
-		{
-			new_ptr[i] = ptr[i];
-			i++;
-		}
-		free(ptr);
-	}
-	return (new_ptr);
+	while ((char)s1[i] == (char)s2[i] && s1[i] && s2[i] &&
+	(char)s1[i] != c && (char)s2[i] != c)
+		i++;
+	return ((char)s1[i] - (char)s2[i]);
 }
